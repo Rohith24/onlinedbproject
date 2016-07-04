@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <script src=" {% static 'js/bootstrap.min.js' %}"></script>
+    <script src=" {% static 'js/jquery.min.js' %}"></script>
+</head>
+<body>
+    <h1>Students from {{ college.name }}:</h1>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <tr class="alert-danger"><th>
+            Student name
+            </th><th>Email id</th><th>Total</th>
+        </tr>
+        {% with students=college.student_set.all %}
+            {% for std in students %}
+            <tr class="alert-danger">
+                <td>{{ std.name }}</td>
+                <td>{{ std.emailid }}</td>
+                <td>{{ std.mark.total }}</td>
+
+            </tr>
+            {% endfor %}
+        {% endwith %}
+    </table>
+</body>
+</html>

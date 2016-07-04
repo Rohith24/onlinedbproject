@@ -1,0 +1,34 @@
+<head>
+    <style>
+        table,tr,td,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+Hi Sir,
+These are the marks of the students from your college.
+<br>
+<table>
+    <tr><th>
+        Student name
+        </th><th>Email id</th><th>Total</th>
+    </tr>
+    {% for std in students %}
+        {% with marks=std.mark_set.all %}
+        <tr>
+            <td>{{ std.name }}</td>
+            <td>{{ std.emailid }}</td>
+            <td>{{ std.mark.total }}</td>
+
+        </tr>
+        {% endwith %}
+    {% endfor %}
+</table>
+<br/>
+Avg marks of your students is {{ clg_avg }}<br/>
+Avg marks of class is {{ total_Avg }}
+<br/>
+<img src="https://plot.ly/~Rohith24/0/max-avg-min.png" alt="bar graph"/>
+</body>

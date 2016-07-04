@@ -1,0 +1,146 @@
+
+
+
+<!--Build a html page about yourself. Have a menu with content links at the top like a typical wiki page. See
+https://en.wikipedia.org/wiki/Nikola_Tesla as an example.
+
+Your education.
+Your native place, what it is famous for.
+Your photo thumbnail, your town, a photo of your village/town etc.-->
+<!DOCTYPE html>
+<html><head>
+  <title>Rohith Reddy Challa</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+<script src=" {% static 'js/bootstrap.min.js' %}"></script>
+<script src=" {% static 'js/jquery.min.js' %}"></script>
+
+
+  <style>
+  body {
+      position: relative;
+  }
+  #section1 {padding-top:50px;height:700px;color: #fff; background-color: #1E88E5;}
+  #section2 {padding-top:50px;height:700px;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;height:700px;color: #fff; background-color: #ff9800;}
+  #section41 {padding-top:50px;height:700px;color: #fff; background-color: #00bcd4;}
+  #section42 {padding-top:50px;height:700px;color: #fff; background-color: #009688;}
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Rohith</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#section1">Introdution</a></li>
+          <li class=""><a href="#section2">Photos</a></li>
+          <li class=""><a href="#section3">Education</a></li>
+          <li class="dropdown open"><a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">City<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class=""><a href="#section41">about city</a></li>
+              <li><a href="#section42">Photos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Welcome</h4>
+      </div>
+      <div class="modal-body">
+        <p>Welcome to my website</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="section1" class="container-fluid">
+    <h1>Rohith Reddy Challa</h1> (30 August 1996)
+    <h3>CAREER OBJECTIVE:</h3>
+To work in a challenging environment that provides generous opportunities for learning. In the field of Software development
+    <h3>TECHNICAL SKILLS</h3>
+<ul><li>Operating Systems – Windows 7 / 8.1 /10</li>
+<li>Languages known – C, C#, Java, Python</li><li>Databases – Oracle</li>
+<li>Web Technologies – XHTML, JavaScript, CSS</li>
+</ul>
+    </h3>
+</div>
+<div id="section2" class="container-fluid">
+    <h1>Photo</h1>
+<img src="../images/ladybug.jpg" alt="Rohith Reddy" width="200" height="300">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+</div>
+<div id="section3" class="container-fluid">
+<h1>Education</h1>
+<table class="table">
+    <tbody><tr>
+        <th>S.No</th>
+        <th>School/College</th>
+        <th>Year of pass</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Vikas high school</td>
+        <td>2011</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Narayana Jr College, Kandukur</td>
+        <td>2013</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Bapatla Engineering College,Bapatla</td>
+        <td>2017</td>
+    </tr>
+</tbody></table>
+    </div>
+<div id="section41" class="container-fluid">
+    <h1>About city</h1>
+    <p>
+    A very beautiful city, Ongole is incredibly famous for its religious and spiritual legacy in the state of Andhra Pradesh. It is the largest city in Prakasam district and is the civil headquarters of the district.
+</p>
+</div>
+<div id="section42" class="container-fluid">
+<img src="../images/20151225034722.jpg" height="300" width="500">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="../images/d8d5fdaacdcb17bcb0aac5ac4cf3b68f.jpg" height="300" width="600">
+    </div>
+<div class="jumbotron">
+	<div class="container">
+		<h1>Hello, world!</h1>
+		<p>Contents...</p>
+		<p>
+			<a class="btn btn-primary btn-lg">Learn more</a>
+		</p>
+	</div>
+</div>
+</body></html>
+
+
+
+
+
